@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {User} from '../models/user';
 
 @Component({
   selector: 'app-user-card',
   templateUrl: './user-card.component.html',
   styleUrls: ['./user-card.component.css']
 })
-export class UserCardComponent implements OnInit {
+export class UserCardComponent implements OnChanges{
+  @Input() data: User;
 
-  constructor() { }
 
-  ngOnInit() {
-  }
-
+    ngOnChanges(changes: SimpleChanges): void {
+      console.log(changes);
+    }
 }

@@ -19,7 +19,7 @@ export class UserService {
 
         return this.http.get(apiURL).pipe(
             map(res => {
-                return res.json().results.map(item => {
+                return res.json().data.map(item => {
                     return new User(
                         item.id,
                         item.first_name,
@@ -34,7 +34,6 @@ export class UserService {
     public getUser(id: number) {
         // TODO: This should return a single user
     }
-
 
     private route() {
         return '/users';

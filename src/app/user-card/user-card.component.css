@@ -1,17 +1,18 @@
-.card {
+.user {
     border: none;
     background: #ffffff;
+    padding: 5px;
 }
 
-.card {
-    min-height: 312px;
+.user {
+    min-height: 315px;
 }
 
-.card .card-title {
+.user .user-title {
     color: #007b5e !important;
 }
 
-.card .card-body img {
+.user .user-body img {
     width: 120px;
     height: 120px;
     border-radius: 50%;

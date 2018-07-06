@@ -1,29 +1,16 @@
-<!doctype html>
-<html class="no-js" lang="">
+<br /><br />
+<h1 class="text-center">TechGap Users</h1>
+<br /><br />
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TechGap Users</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div *ngIf="!data || data.length == 0" class="alert alert-dark" role="alert">
+    No user were found
+</div>
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+<div class="container">
+    <div clas="row" *ngIf="data && data.length > 0">
+        <div *ngFor="let user of data" class="col-sm-4 d-inline-block">
+            <app-user-card [data]="user" ></app-user-card>
+        </div>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
-<!--[if lte IE 9]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-<![endif]-->
-
-<!-- Add your site or application content here -->
-<p>Hello world!</p>
-<button class="btn btn-primary"><span>Hello World</span></button>
-
-</body>
-
-</html>
+    </div>
+</div>
