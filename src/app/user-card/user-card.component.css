@@ -1,0 +1,18 @@
+.card {
+    border: none;
+    background: #ffffff;
+}
+
+.card {
+    min-height: 312px;
+}
+
+.card .card-title {
+    color: #007b5e !important;
+}
+
+.card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
