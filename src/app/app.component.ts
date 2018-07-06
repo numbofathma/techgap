@@ -26,14 +26,10 @@ export class AppComponent implements OnInit {
     }
 
     public pageChanged(event: any) {
-        console.log('pageChanged');
         this.getUsers(event.page, 3);
     }
 
     protected getUsers(page: number, limit: number) {
-
-        console.log('getUsers');
-
         this.userService.getUsers(page, limit).subscribe(
             result => {
                 const jsonResult = result.json();
