@@ -12,7 +12,7 @@ export class UserService {
     constructor(protected http: Http) {
     }
 
-    public getUsers(page: number = 1, perPage: number = 3): Observable {
+    public getUsers(page: number = 1, perPage: number = 3): Observable<any> {
         const apiURL = `${environment.API_URL}${this.route()}?page=${page}&per_page=${perPage}`;
 
         return this.http.get(apiURL);
