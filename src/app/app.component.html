@@ -1,6 +1,6 @@
-<br /><br />
+<br/><br/>
 <h1 class="text-center">TechGap Users</h1>
-<br /><br />
+<br/><br/>
 
 <div *ngIf="!data || data.length == 0" class="alert alert-dark" role="alert">
     No user were found
@@ -9,8 +9,15 @@
 <div class="container">
     <div clas="row" *ngIf="data && data.length > 0">
         <div *ngFor="let user of data" class="col-sm-4 d-inline-block">
-            <app-user-card [data]="user" ></app-user-card>
+            <app-user-card [data]="user"></app-user-card>
         </div>
 
+        <br/><br/><br/><br/>
+        <div class="col-xs-12 col-12 text-center">
+            <pagination [totalItems]="pagination.total" [(ngModel)]="pagination.page"
+                        [itemsPerPage]="pagination.per_page"
+                        (pageChanged)="pageChanged($event)"></pagination>
+        </div>
     </div>
+
 </div>
